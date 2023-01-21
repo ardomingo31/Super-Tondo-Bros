@@ -10,12 +10,13 @@ public class PlayerHealthManager : MonoBehaviour
     public PlayerHealth maxHealth;
     public PlayerHealth currentHealth;
 
-    public Animator anim;
+    Animator anim;
 
     public GameObject startingPoint;
     void Start()
     {
         currentHealth.value = maxHealth.value;
+        anim = GetComponent<Animator>();
     }
 
     public void KillPlayer()
@@ -37,7 +38,9 @@ public class PlayerHealthManager : MonoBehaviour
     IEnumerator ResetPlayer()
     {
         PlayerMovement.enableMovement = false;
-        yield return new WaitForSeconds(1);
+        anim.SetTrigger("Dead");
+        yield return new WaitForSeconds(0.7f);
+        anim.ResetTrigger("Dead");
         transform.position = startingPoint.transform.position;
         PlayerMovement.enableMovement = true;
     }

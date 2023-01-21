@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6529783868329353953}
   - component: {fileID: 6529783868329353958}
   - component: {fileID: 6529783868329353959}
+  - component: {fileID: 6529783868329353954}
   - component: {fileID: 6529783868329353952}
   - component: {fileID: 6529783868329353955}
-  - component: {fileID: 6529783868329353954}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -114,6 +114,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25561866, y: 0.373964}
   m_EdgeRadius: 0
+--- !u!61 &6529783868329353954
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529783868329353957}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32333332, y: 0.39}
+    newSize: {x: 0.32333332, y: 0.39}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56, y: 0.39}
+  m_EdgeRadius: 0
 --- !u!95 &6529783868329353952
 Animator:
   serializedVersion: 4
@@ -152,29 +178,4 @@ MonoBehaviour:
   colliderDistance: 0
   damage: 2
   deathEffect: {fileID: 1297072805519291807, guid: 91f325875192d4c4aa8eb0bccd464ed2, type: 3}
---- !u!61 &6529783868329353954
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529783868329353957}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32333332, y: 0.39}
-    newSize: {x: 0.32333332, y: 0.39}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.92, y: 0.39}
-  m_EdgeRadius: 0
+  player: {fileID: 0}
