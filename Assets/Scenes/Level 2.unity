@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2141136460}
-  loadSceneNumber: 0
+  loadSceneNumber: 4
 --- !u!61 &811281041
 BoxCollider2D:
   m_ObjectHideFlags: 0
