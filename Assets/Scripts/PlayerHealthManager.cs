@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerHealthManager : MonoBehaviour
         else
         {
             Debug.Log($"Player Health: {currentHealth.value}");
+            SceneManager.LoadScene(3);
             Debug.Log("Game Over");
         }
     }
