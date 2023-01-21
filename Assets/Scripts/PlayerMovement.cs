@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    public static bool enableMovement = true;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -35,17 +36,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
-        Rb.velocity = new Vector2(dirX * moveSpeed, Rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (enableMovement)
         {
-            Rb.velocity = new Vector2(Rb.velocity.x, jumpForce);
-            isJumping = true;
+            dirX = Input.GetAxisRaw("Horizontal");
+            Rb.velocity = new Vector2(dirX * moveSpeed, Rb.velocity.y);
+
+            if (Input.GetButtonDown("Jump") && !isJumping)
+            {
+                Rb.velocity = new Vector2(Rb.velocity.x, jumpForce);
+                isJumping = true;
+            }
+            UpdateAnimationState();
         }
-
-        UpdateAnimationState();
-
+        else
+        {
+            Rb.velocity = new Vector2(0, Rb.velocity.y);
+        }
     }
     void OnCollisionEnter2D(Collision2D other)
     {
