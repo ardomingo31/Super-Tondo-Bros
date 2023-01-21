@@ -8,7 +8,8 @@ public class Weapon : MonoBehaviour
     public int damage = 20;
     public GameObject impactEffect;
     public LineRenderer lineRenderer;
-    
+    public Animator anim;
+
 
     void Update()
     {
@@ -20,7 +21,10 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        
+
+        anim.SetTrigger("attack");
+        anim.ResetTrigger("attack");
+        Debug.Log("attack");
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
         if (hitInfo)

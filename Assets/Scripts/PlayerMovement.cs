@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
 
 
-    private enum MovementState { idle, running, jumping, falling, attacking }
+    private enum MovementState { idle, running, jumping, falling}
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
