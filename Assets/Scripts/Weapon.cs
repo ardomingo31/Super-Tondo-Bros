@@ -16,9 +16,12 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {           
-            StartCoroutine(Shoot());
+        if (PlayerMovement.enableMovement)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {           
+                StartCoroutine(Shoot());
+            }
         }
     }
 
